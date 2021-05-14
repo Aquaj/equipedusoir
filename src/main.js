@@ -4,10 +4,10 @@ const app = new App({
   target: document.body,
   props: {
     members: [
-      { name: 'niclo', position: ['50vh', '19vw'] },
-      { name: 'moon', position: ['29vh', '45vw'] },
-      { name: 'sharl', position: ['48vh', '67vw'] },
-      { name: 'amine', position: ['69vh', '44vw'] },
+      { name: 'moon',  x: '45vw', y: '29vh' },
+      { name: 'niclo', x: '19vw', y: '50vh' },
+      { name: 'sharl', x: '67vw', y: '48vh' },
+      { name: 'amine', x: '44vw', y: '69vh' },
     ],
   }
 });

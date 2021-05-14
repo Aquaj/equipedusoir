@@ -8,7 +8,7 @@
 <main>
   <Title content="l'équipe du soir" style="top" />
   {#each members as member}
-    <Image bind:member={member} />
+    <Image {...member} />
   {/each}
   <Title content="c nous" style="bottom" />
 </main>
