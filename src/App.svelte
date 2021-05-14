@@ -29,7 +29,7 @@
     <img
     alt={member.name}
     class='member'
-    src='./images/{member.name}.jpg'
+    src='./images/{member.name}.webp'
     style='position: absolute;
       top: {member.position[0]};
       left: {member.position[1]};
