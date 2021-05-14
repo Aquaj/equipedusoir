@@ -7,6 +7,7 @@ const app = new App({
       { name: 'niclo', position: ['50vh', '19vw'] },
       { name: 'moon', position: ['29vh', '45vw'] },
       { name: 'sharl', position: ['48vh', '67vw'] },
+      { name: 'amine', position: ['69vh', '44vw'] },
     ],
   }
 });

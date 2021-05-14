@@ -35,7 +35,7 @@
   }
 
   .bottom {
-    top: 60vh;
+    top: 45vh;
   }
 
   h1 span {
