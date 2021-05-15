@@ -10,22 +10,12 @@
   let pos_x;
   let pos_y;
 
+  var rotation_amplitude = 45
+  var spatial_amplitude = 25
   const interval = setInterval(() => {
-    do {
-      var amplitude = 45
-      var old_rot = rot;
-      rot = amplitude - Math.floor(Math.random() * amplitude*2);
-    } while (Math.abs(old_rot - rot) < amplitude/2);
-    do {
-      var amplitude = 25
-      var old_pos = pos_x;
-      pos_x = amplitude - Math.floor(Math.random() * amplitude*2);
-    } while (Math.abs(old_pos - pos_x) < amplitude/2);
-    do {
-      var amplitude = 25
-      var old_pos = pos_y;
-      pos_y = amplitude - Math.floor(Math.random() * amplitude*2);
-    } while (Math.abs(old_pos - pos_y) < amplitude/2);
+    rot = rotation_amplitude - Math.floor(Math.random() * rotation_amplitude*2);
+    pos_x = spatial_amplitude - Math.floor(Math.random() * spatial_amplitude*2);
+    pos_y = spatial_amplitude - Math.floor(Math.random() * spatial_amplitude*2);
   }, 1000);
 
   onDestroy(() => clearInterval(interval));
