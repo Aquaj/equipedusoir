@@ -15,6 +15,7 @@
 
 <style>
   h1 {
+    z-index: -1;
     position: absolute;
     left: 0;
     width: 100vw;
@@ -26,7 +27,7 @@
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: move 40s linear infinite;
+    animation: move 1s linear infinite;
     height: 100vh;
   }
 
@@ -39,28 +40,20 @@
   }
 
   h1 span {
-    /* text-shadow: 0 0px #f3c623, 0 0px #f2aaaa; */
-    transform: translate(0, 100%) rotate(4deg);
+    transform: translate(0, 100%) rotate(8deg);
     animation: jump 4s linear infinite;
     display: inline-block;
   }
 
   @keyframes jump {
-    25% {
-      /* text-shadow: 0 20px #f37121, 0 30px #f2aaaa; */
-    }
-    50% {
-      transform: translate(0, 0) rotate(-8deg);
-      /* text-shadow: 0 10px #8fc0a9, 0 3px #84a9ac; */
-    }
-    75% {
-      /* text-shadow: 0 -30px #d54062, 0 -20px #8fc0a9; */
-    }
+    50% { transform: translate(0, 0) rotate(-8deg); }
   }
 
-  @keyframes move {
-    to {
-      background-position: 4500vh;
+  @keyframes move { to { background-position: 100vh; } }
+
+  @media(max-width: 720px) {
+    h1 span {
+      transform: none;
     }
   }
 </style>

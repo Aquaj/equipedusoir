@@ -2,8 +2,7 @@
   import { onDestroy } from 'svelte';
 
   export let name;
-  export let x;
-  export let y;
+  export let x; export let y;
   export let description;
 
   if(!description) {
@@ -25,7 +24,7 @@
   onDestroy(() => clearInterval(interval));
 </script>
 
-<div class='image-container' style='position: absolute; top: {y}; left: {x};'>
+<div class='container' style='position: absolute; top: {y}; left: {x};'>
   <img
     alt={description.replaceAll('<br />', '')}
     class='member'
@@ -35,36 +34,45 @@
       translate({pos_x}px, {pos_y}px)
     ;'
   />
-  <div class='description'>
-    {@html description || ''}
-  </div>
+</div>
+<div class='description' style='position: absolute; top: {y}; left: {x};'>
+  {@html description || ''}
 </div>
 
 <style>
-  .image-container {
+  .container {
     position: relative;
-    z-index: 10; /* Catch the hover */
+    z-index: 0;
   }
 
   img.member {
     height: 250px;
-  }
-
-  .image-container:hover .description {
-    display: block;
+    z-index: -1; /* So it doesn't catch the hover */
   }
 
   .description {
     display: none;
 
-    position: absolute;
-    top: 70%;
-    left: 40%;
+    transform: translate(0, 200px);
 
     width: 180px;
     padding: 5px;
 
     background-color: white;
     border: solid black 1px;
+  }
+
+  .container:hover + .description  {
+    display: block;
+  }
+
+  @media(max-width: 720px) {
+    img.member {
+      height: 150px;
+    }
+    .description {
+      z-index: 2;
+      transform: translate(0, 100px);
+    }
   }
 </style>
