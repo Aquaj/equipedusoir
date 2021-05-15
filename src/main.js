@@ -7,7 +7,7 @@ const app = new App({
       { name: 'moon',
         x: '45vw', y: '29vh',
         description: 'Moon "Coucou" Five:<br />inventeur de chargeur,<br />' +
-        'écrivain de la pensée,<br />raciste.',
+        'écrivain de la pensée.<br />Raciste.',
       }, {
         name: 'niclo',
         x: '19vw', y: '50vh',
