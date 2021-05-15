@@ -42,7 +42,7 @@
     ;'
   />
   <div class='description'>
-    {description || ''}
+    {@html description || ''}
   </div>
 </div>
 
@@ -67,8 +67,8 @@
     top: 70%;
     left: 40%;
 
-    width: 175px;
-    padding: 15px;
+    width: 180px;
+    padding: 5px;
 
     background-color: white;
     border: solid black 1px;

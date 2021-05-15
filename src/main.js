@@ -6,17 +6,17 @@ const app = new App({
     members: [
       { name: 'moon',
         x: '45vw', y: '29vh',
-        description: 'Moon "Coucou" Five: inventeur de chargeur, ' +
-          'écrivain de la pensée, raciste.',
+        description: 'Moon "Coucou" Five:<br />inventeur de chargeur,<br />' +
+        'écrivain de la pensée,<br />raciste.',
       }, {
         name: 'niclo',
         x: '19vw', y: '50vh',
-        description: "L'amie des animaux, Touhou player extraordinaire.",
+        description: "L'amie des animaux,<br />Touhou player extraordinaire.",
       }, {
         name: 'sharl',
         x: '67vw', y: '48vh',
-        description: 'sharl "Coucou" sharl: ' +
-          'possesseur de chargeur, mange tes morts Moon.',
+        description: 'sharl "Coucou" sharl:<br />' +
+        'possesseur de chargeur,<br />mange tes morts Moon.',
       }, {
         name: 'amine',
         x: '44vw', y: '69vh',
