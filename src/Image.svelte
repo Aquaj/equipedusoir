@@ -6,12 +6,16 @@
   export let y;
   export let description;
 
+  if(!description) {
+    description = '';
+  };
+
   let rot;
   let pos_x;
   let pos_y;
 
-  var rotation_amplitude = 45
-  var spatial_amplitude = 25
+  const rotation_amplitude = 45
+  const spatial_amplitude = 25
   const interval = setInterval(() => {
     rot = rotation_amplitude - Math.floor(Math.random() * rotation_amplitude*2);
     pos_x = spatial_amplitude - Math.floor(Math.random() * spatial_amplitude*2);
@@ -23,7 +27,7 @@
 
 <div class='image-container' style='position: absolute; top: {y}; left: {x};'>
   <img
-    alt={name}
+    alt={description.replaceAll('<br />', '')}
     class='member'
     src='./images/{name}.webp'
     style='transform:
