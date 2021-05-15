@@ -27,6 +27,7 @@
     background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: white;
     animation: move 1s linear infinite;
     height: 100vh;
   }
