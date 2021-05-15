@@ -20,7 +20,7 @@ const app = new App({
       }, {
         name: 'amine',
         x: '44vw', y: '69vh',
-        description: 'Poti blagueur en chef.',
+        description: 'Potit blagueur en chef.',
       },
     ],
   }
